@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,10 +10,42 @@
     <script src="script.js"></script>
     <script src="render.js"></script>
     <link rel="icon" type="image/x-icon" href="/img/pokeball_icon_211225.png">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 </head>
-<body>
+
+<body onload="firstGeneration()">
 
     <div id="title">Pok<span>é</span>mon</div>
+    <div class="generations">
+        <div>New Pok<span>é</span>mon in generation:</div>
+        <div>
+            <button type="button" class="generation btn btn-secondary" onclick="firstGeneration()">
+                1. Generation
+            </button>
+            <button type="button" class="generation btn btn-primary" onclick="secondGeneration()">
+                2. Generation
+            </button>
+            <button type="button" class="generation btn btn-success" onclick="thirdGeneration()">
+                3. Generation
+            </button>
+            <button type="button" class="generation btn btn-danger" onclick="fourthGeneration()">
+                4. Generation
+            </button>
+            <button type="button" class="generation btn btn-warning" onclick="fifthGeneration()">
+                5. Generation
+            </button>
+            <button type="button" class="generation btn btn-info" onclick="sixthGeneration()">
+                6. Generation
+            </button>
+            <button type="button" class="generation btn btn-light" onclick="seventhGeneration()">
+                7. Generation
+            </button>
+            <button type="button" class="generation btn btn-dark" onclick="eigthGeneration()">
+                8. Generation
+            </button>
+        </div>
+    </div>
     <div id="poke-icons"></div>
 </body>
+
 </html>

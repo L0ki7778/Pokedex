@@ -3,21 +3,21 @@ let names = [];
 let image = [];
 let pokes = []
 
-async function getApi(i){
-    let PokeUrl=`https://pokeapi.co/api/v2/pokemon/${i}`
+async function getApi(i, limit) {
+    let PokeUrl = `https://pokeapi.co/api/v2/pokemon/${i}`
     const response = await fetch(PokeUrl);
-    if(response.ok){
-        const data =await response.json()
+    if (response.ok) {
+        const data = await response.json()
         let pokemon = {
             id: data.id,
-            name:data.name,
-            src : data.sprites.front_default
+            name: data.name,
+            src: data.sprites.front_default
         }
         pokes.push(pokemon)
-        if(pokes.length===151){           
-                renderIcons(pokes);
+        if (pokes.length === limit) {
+            renderIcons(pokes);
         }
-    }else{
+    } else {
         alert("error")
     };
 }
@@ -25,50 +25,66 @@ async function getApi(i){
 // console.log(pokes.sort(({id:a}, {id:b})=>{b-a}))
 
 
-firstGeneration()
-
-
-function firstGeneration(){
-    for(let i = 1; i<152 ;i++){
-        getApi(i)
+function firstGeneration() {
+    pokes = [];
+    clearIcons()
+    for (let i = 1; i < 152; i++) {
+        getApi(i, 151)
     }
 }
-function secondGeneration(){
-    for(let i = 152; i<252 ;i++){
-        getApi(i)
+function secondGeneration() {
+    pokes = [];
+    clearIcons()
+    for (let i = 152; i < 252; i++) {
+        getApi(i, 100)
     }
 }
-function thirdGeneration(){
-    for(let i = 252; i<387 ;i++){
-        getApi(i)
+function thirdGeneration() {
+    pokes = [];
+    clearIcons()
+    let limit = 387 - 252;
+    for (let i = 252; i < 387; i++) {
+        getApi(i,limit)
     }
 }
-function fourthGeneration(){
-    for(let i = 387; i<494 ;i++){
-        getApi(i)
+function fourthGeneration() {
+    pokes = [];
+    clearIcons()
+    let limit = 494 - 387;
+    for (let i = 387; i < 494; i++) {
+        getApi(i, limit)
     }
 }
-function sixthGeneration(){
-    for(let i = 494; i<650 ;i++){
-        getApi(i)
+function fifthGeneration() {
+    pokes = [];
+    clearIcons()
+    let limit = 650-494;
+    for (let i = 494; i < 650; i++) {
+        getApi(i, limit)
     }
 }
-function seventhGeneration(){
-    for(let i = 650; i<722 ;i++){
-        getApi(i)
+function sixthGeneration() {
+    pokes = [];
+    clearIcons()
+    let limit = 722 - 650;
+    for (let i = 650; i < 722; i++) {
+        getApi(i, limit)
     }
 }
-function eigthGeneration(){
-    for(let i = 722; i<803 ;i++){
-        getApi(i)
+function seventhGeneration() {
+    pokes = [];
+    clearIcons()
+    let limit = 803 - 722;
+    for (let i = 722; i < 803; i++) {
+        getApi(i, limit)
     }
 }
-function ninthGeneration(){
-    for(let i = 803; i<808 ;i++){
-        if(i === 807){
-            return   getApi(i)
-        }
-         getApi(i)
+function eigthGeneration() {
+    pokes = [];
+    clearIcons()
+    let limit = 808 - 803;
+    for (let i = 803; i < 808; i++) {
+        getApi(i, limit)
     }
 }
 
