@@ -1,0 +1,44 @@
+@charset "UTF-8";
+body {
+  margin: 0;
+}
+
+#title {
+  font-family: "Pokemon Solid", sans-serif;
+  color: black;
+  letter-spacing: 5px;
+  font-size: 80px;
+  color: #FFCC01;
+  -webkit-text-stroke: 5px #3462AE;
+  text-align: center;
+}
+
+#poke-icons {
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
+}
+
+.jumping:hover {
+  cursor: pointer;
+  animation: jump 0.5s ease-in-out infinite;
+}
+
+.poke-name {
+  font-family: "Roboto", sans-serif;
+  font-weight: bold;
+  text-align: center;
+  font-size: 12px;
+}
+
+@keyframes jump {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateY(0); /* Anfangs- und Endposition (keine Änderung in der vertikalen Richtung) */
+  }
+  40% {
+    transform: translateY(-20px); /* Aufwärtsbewegung um 20px in der vertikalen Richtung */
+  }
+  60% {
+    transform: translateY(-10px); /* Abwärtsbewegung um 10px in der vertikalen Richtung */
+  }
+}/*# sourceMappingURL=styles.css.map */
