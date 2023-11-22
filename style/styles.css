@@ -72,6 +72,43 @@ body {
     /* Abwärtsbewegung um 10px in der vertikalen Richtung */
   }
 }
+#from-first {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: red;
+  color: white;
+  height: 100%;
+  margin: 0;
+  border-radius: 8px 0 0 8px;
+  border-right: 1px solid black;
+  padding: 0 10px;
+}
+
+#to-eight {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  color: red;
+  height: 100%;
+  border-radius: 0 10px 10px 0;
+  padding: 0 10px;
+}
+
+button + #all-generations {
+  position: relative;
+  left: 0;
+  right: 0;
+  margin: 12px auto;
+  justify-self: center;
+  display: flex;
+  border-radius: 10px;
+  padding: 0;
+  height: 42px;
+  border: 3px solid black;
+}
+
 .red {
   background-color: #ff0000;
 }

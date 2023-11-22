@@ -1,7 +1,8 @@
 let test;
 let names = [];
 let image = [];
-let pokes = []
+let pokes = [];
+
 
 async function getApi(i, limit) {
     let PokeUrl = `https://pokeapi.co/api/v2/pokemon/${i}`
